@@ -1,0 +1,41 @@
+/** 定义需要遍历的像素 */
+@marAndPad: 0, 1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 20, 22, 24, 25, 26, 28, 30, 32, 36, 38, 40, 42, 48, 50, 54, 60, 83, 100, 160, 200, -10;
+
+.loop(@i:1) when (@i <= length(@marAndPad)) {
+  @key: extract(@marAndPad, @i);
+  @value: unit(@key, px); // 拼接单位
+
+  .p-@{key} {
+    padding: @value;
+  }
+  .pt-@{key} {
+    padding-top: @value;
+  }
+  .pr-@{key} {
+    padding-right: @value;
+  }
+  .pb-@{key} {
+    padding-bottom: @value;
+  }
+  .pl-@{key} {
+    padding-left: @value;
+  }
+  .m-@{key} {
+    margin: @value;
+  }
+  .mt-@{key} {
+    margin-top: @value;
+  }
+  .mr-@{key} {
+    margin-right: @value;
+  }
+  .mb-@{key} {
+    margin-bottom: @value;
+  }
+  .ml-@{key} {
+    margin-left: @value;
+  }
+  .loop(@i+1);
+}
+
+.loop();

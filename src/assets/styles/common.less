@@ -1,0 +1,110 @@
+//全局影响的样式
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'PingFang SC', 'Hiragino Sans GB', 'Heiti SC', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-break: break-all;
+}
+html,
+body {
+  background: #f4f4f4;
+}
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  background-color: transparent;
+}
+ul,
+li,
+ol {
+  list-style: none;
+}
+a img {
+  border: none;
+}
+a,
+a:link {
+  text-decoration: none;
+}
+textarea,
+input {
+  background: none;
+  padding: 0;
+}
+i {
+  font-style: normal;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+// box局中
+.box-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.tab:active {
+  background-color: rgba(0, 0, 0, 1);
+}
+#app {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+// 手势
+.sk-cp {
+  cursor: pointer;
+}
+
+// 超出点点点
+.beyond-little {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// 中间贯穿线
+.line-through {
+  text-decoration: line-through;
+}
+
+// 改善滚动流畅度
+.scrolling {
+  -webkit-overflow-scrolling: touch;
+}
+
+
+// div内容只显示两行，多余的显示...
+.two-row-beyond-little {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+// div内容只显示3行，多余的显示...
+.Three-row-beyond-little {
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
